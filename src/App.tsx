@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { LabelCardContainer, Search, SideNav, SideNavContent } from "./styles/AppStyles";
+import { IoMenu } from "react-icons/io5";
+import { Map, WatherCard } from "./components";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <SideNav>
+        <SideNavContent>
+          <Search>
+            <IoMenu />
+          </Search>
+          <LabelCardContainer>
+            <h5>Localização atual</h5>
+          </LabelCardContainer>
+          <WatherCard />
+          <LabelCardContainer>
+            <h5>Previsões</h5>
+          </LabelCardContainer>
+          <WatherCard />
+        </SideNavContent>
+      </SideNav>
+      <Map />
+    </>
   );
 }
 
