@@ -90,7 +90,6 @@ function App() {
           </SideNavContent>
         </SideNav>
       )}
-
       <Map />
     </>
   );

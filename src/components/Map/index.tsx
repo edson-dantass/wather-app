@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Autocomplete, GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
-import { InputSearch } from "../../styles/AppStyles";
+import { InputSearch, NotFoundContainer } from "../../styles/AppStyles";
 import { LIBRARIES } from "../../config/constants";
 import { mapStyles } from "../../styles/mapStyles";
 import axios from "axios";
 import { useWather } from "../../hooks/WatherHook";
+import SvgNotFound from "../../img/not-found.svg";
 
-function Map() {
+const Map: React.FC = () => {
   const [location, setLocation] = useState<GeolocationPosition>();
   const [center, setCenter] = useState({ lat: 0, lng: 0 });
   const [autocomplete, setAutocomplete] = useState<google.maps.places.Autocomplete>();
@@ -76,7 +77,7 @@ function Map() {
       setAutoCompleteResult(place);
       lat && lng && setCenter({ lat, lng });
     } else {
-      console.log("Autocomplete is not loaded yet!");
+      console.log("Autocomplete não carregado...");
     }
   };
   return isLoaded && location && center ? (
@@ -99,8 +100,13 @@ function Map() {
       <></>
     </GoogleMap>
   ) : (
-    <></>
+    <NotFoundContainer>
+      <div>
+        <img src={SvgNotFound} alt="Not Found - 404" />
+      </div>
+      <h1>Ooops, houve um problema.</h1>
+    </NotFoundContainer>
   );
-}
+};
 
 export default React.memo(Map);

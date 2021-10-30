@@ -89,7 +89,7 @@ export const NotFoundContainer = styled.div`
   height: 100vh;
   h1 {
     margin: 1em 0;
-    color: #2c2d31;
+    color: #ffff;
   }
   div {
     width: 30em;
