@@ -34,62 +34,60 @@ function App() {
     <>
       <TopSideNav>
         {visibleMenu ? (
-          <IoClose onClick={() => setVisibleMenu(!visibleMenu)} />
+          <IoClose onClick={() => setVisibleMenu(false)} />
         ) : (
-          <IoMenu onClick={() => setVisibleMenu(!visibleMenu)} />
+          <IoMenu onClick={() => setVisibleMenu(true)} />
         )}
       </TopSideNav>
-      {visibleMenu && (
-        <SideNav>
-          <SideNavContent>
-            <Search>
-              <IoMenu onClick={() => {}} />
-            </Search>
-            <Scrollbar style={{ height: "calc(100% - 5em)" }} thumbYProps={{ style: { background: "#161d2f" } }}>
-              <ScrollPaddingRight>
-                {wather.isData ? (
-                  <>
-                    <LabelCardContainer>
-                      <h5>Localização atual</h5>
-                    </LabelCardContainer>
-                    <WatherCard options={wather} />
-                    <LabelCardContainer>
-                      <h5>Previsões</h5>
-                    </LabelCardContainer>
-                    {wather.forecast.forecastday.map((item, i) => (
-                      <Forecasts key={i}>
-                        <ForecastLeft>
-                          <img src={`http:${item.day.condition.icon}`} alt={item.day.condition.text} />
-                          <h3>{getCurrentDay(item.date)}</h3>
-                          <p>{formatDate(item.date)}</p>
-                        </ForecastLeft>
-                        <ForecastRight>
-                          <h1>{Math.ceil(item.day.avgtemp_c)}</h1>
-                          <p>{item.day.condition.text}</p>
-                          <div className="box">
-                            <p>
-                              Máx {Math.ceil(item.day.maxtemp_c)}º Min {Math.ceil(item.day.mintemp_c)}º
-                            </p>
-                          </div>
-                        </ForecastRight>
-                      </Forecasts>
-                    ))}
-                  </>
-                ) : (
-                  <Loading>
-                    <div className="lds-ring">
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                    </div>
-                  </Loading>
-                )}
-              </ScrollPaddingRight>
-            </Scrollbar>
-          </SideNavContent>
-        </SideNav>
-      )}
+      <SideNav style={{ display: visibleMenu ? "block" : "none" }}>
+        <SideNavContent>
+          <Search>
+            <IoMenu onClick={() => {}} />
+          </Search>
+          <Scrollbar style={{ height: "calc(100% - 5em)" }} thumbYProps={{ style: { background: "#161d2f" } }}>
+            <ScrollPaddingRight>
+              {wather.isData ? (
+                <>
+                  <LabelCardContainer>
+                    <h5>Localização atual</h5>
+                  </LabelCardContainer>
+                  <WatherCard options={wather} />
+                  <LabelCardContainer>
+                    <h5>Previsões</h5>
+                  </LabelCardContainer>
+                  {wather.forecast.forecastday.map((item, i) => (
+                    <Forecasts key={i}>
+                      <ForecastLeft>
+                        <img src={`http:${item.day.condition.icon}`} alt={item.day.condition.text} />
+                        <h3>{getCurrentDay(item.date)}</h3>
+                        <p>{formatDate(item.date)}</p>
+                      </ForecastLeft>
+                      <ForecastRight>
+                        <h1>{Math.ceil(item.day.avgtemp_c)}</h1>
+                        <p>{item.day.condition.text}</p>
+                        <div className="box">
+                          <p>
+                            Máx {Math.ceil(item.day.maxtemp_c)}º Min {Math.ceil(item.day.mintemp_c)}º
+                          </p>
+                        </div>
+                      </ForecastRight>
+                    </Forecasts>
+                  ))}
+                </>
+              ) : (
+                <Loading>
+                  <div className="lds-ring">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                </Loading>
+              )}
+            </ScrollPaddingRight>
+          </Scrollbar>
+        </SideNavContent>
+      </SideNav>
       <Map />
     </>
   );
