@@ -1,24 +1,36 @@
 import React from "react";
 import { CardBody, CardFooter, CardFooterContainer, CardHead, Container } from "./styles";
-import { IoNavigate, IoPartlySunny } from "react-icons/io5";
+import { IoNavigate } from "react-icons/io5";
+import { WatherContextProps } from "../../config/types/WatherTypes";
 
-const WatherCard: React.FC = () => {
+interface WatherCardProps {
+  options: WatherContextProps;
+}
+const WatherCard: React.FC<WatherCardProps> = ({ options }) => {
+  const { current, location, forecast } = options;
   return (
     <Container>
       <CardHead>
         <h1>
-          Fortaleza <IoNavigate />
+          {location.name} - {location.region}
+          <IoNavigate />
         </h1>
-        <h2>Rua teodoro de castro 766</h2>
+        <h2>{location.tz_id}</h2>
       </CardHead>
       <CardBody>
-        <h1>32º</h1>
-        <IoPartlySunny />
+        <h1>{Math.ceil(current.temp_c)}º</h1>
+        <img
+          src={`http:${current.condition.icon.replace("64", "128").replace("64", "128")}`}
+          alt={current.condition.text}
+        />
       </CardBody>
       <CardFooter>
         <CardFooterContainer>
-          <h6>Ensolarado</h6>
-          <h6>Máx 33º Min 25º</h6>
+          <h6>{current.condition.text}</h6>
+          <h6>
+            Máx {Math.ceil(forecast.forecastday[0]?.day.maxtemp_c)}º Min{" "}
+            {Math.ceil(forecast.forecastday[0]?.day.mintemp_c)}º
+          </h6>
         </CardFooterContainer>
       </CardFooter>
     </Container>

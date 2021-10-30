@@ -25,7 +25,7 @@ export const Container = styled.div`
   }
 `;
 export const CardHead = styled.div`
-  padding: 1em 1em 0 1em;
+  padding: 1em 1em 0.5em 1em;
   animation: ${opacityAnimation} 0.3s ease 0.4s forwards;
   opacity: 0;
   h1 {
@@ -53,6 +53,7 @@ export const CardBody = styled.div`
   justify-content: space-between;
   align-items: center;
   h1 {
+    margin-top: -0.3em;
     font-size: 3.5em;
     color: #ffffff;
     font-weight: 500;
@@ -65,7 +66,6 @@ export const CardBody = styled.div`
 export const CardFooter = styled.div`
   animation: ${opacityAnimation} 0.3s ease 0.4s forwards;
   opacity: 0;
-  margin-top: 1em;
   padding: 0 1em;
 `;
 
