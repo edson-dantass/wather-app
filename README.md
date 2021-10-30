@@ -6,13 +6,16 @@ do dia atual e dos próximos dias.
 
 ## Api's
 
-Maps JavaScript API
-Consulte https://console.cloud.google.com para mais informações.
-Necessita da chave KEY localizada no arquivo .env para a autentificação da API.
-Para facilitar a utilização do Google Maps com React usei: https://www.npmjs.com/package/@react-google-maps/api
-Weatherapi
-Consulte https://www.weatherapi.com/docs/ para mais informações.
-Necessita da chave KEY localizada no arquivo .env para a autentificação da API .
+### Maps JavaScript API
+
+- Consulte https://console.cloud.google.com para mais informações.
+- Necessita da chave KEY localizada no arquivo .env para a autentificação da API.
+- Para facilitar a utilização do Google Maps com React usei: https://www.npmjs.com/package/@react-google-maps/api
+
+### Weatherapi
+
+- Consulte https://www.weatherapi.com/docs/ para mais informações.
+- Necessita da chave KEY localizada no arquivo .env para a autentificação da API .
 
 ### `yarn start`
 
