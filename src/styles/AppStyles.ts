@@ -32,7 +32,7 @@ export const SideNav = styled.div`
 `;
 export const SideNavContent = styled.div`
   padding: 1em;
-  background-color: #0c121e;
+  background-color: rgb(12 17 29 / 90%);
   height: 100vh;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
