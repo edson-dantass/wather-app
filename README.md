@@ -20,7 +20,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 - Possui uma conta em https://console.cloud.google.com para obter uma KEY de acesso para ultilizar o mapa.
 - Possui uma conta em https://www.weatherapi.com/docs/ para obter uma KEY de acesso para ultilizar a API de clima.
 
-## 🚀 Instalando <nome_do_projeto>
+## 🚀 Instalando Wather App
 
 Para instalar o Wather App, siga estas etapas:
 
