@@ -1,41 +1,81 @@
 # Weather App
 
-Uma aplicação web onde o usuário consegue visualizar as
-informações do clima de determinada localização. O usuário deverá ver sempre as informações
-do dia atual e dos próximos dias.
+<!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
-## Informações sobre as APIs
+![GitHub repo size](https://img.shields.io/github/repo-size/edson-dantass/README-template?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/edson-dantass/README-template?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/edson-dantass/README-template?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/edson-dantass/README-template?style=for-the-badge)
 
-### Maps JavaScript API
+<img src="exemplo-image.png" alt="exemplo imagem">
 
-- Consulte https://console.cloud.google.com para mais informações.
-- Necessita da chave KEY localizada no arquivo .env para a autentificação da API.
-- Para facilitar a utilização do Google Maps com React usei: https://www.npmjs.com/package/@react-google-maps/api
+> Uma aplicação web onde o usuário consegue visualizar as informações do clima de determinada localização. O usuário deverá ver sempre as informações do dia atual e dos próximos dias.
 
-### Weatherapi
 
-- Consulte https://www.weatherapi.com/docs/ para mais informações.
-- Necessita da chave KEY localizada no arquivo .env para a autentificação da API .
+## 💻 Pré-requisitos
 
-### `yarn start`
+Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-Executa o aplicativo no modo de desenvolvimento.\
-Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo no navegador.
+* Você instalou a versão mais recente do `NodeJS`
+* Yarn (Opcional)
+* Ter uma conta em https://console.cloud.google.com para obter uma KEY de acesso para ultilizar o mapa.
+* Ter uma conta em https://www.weatherapi.com/docs/ para obter uma KEY de acesso para ultilizar a API de clima.
 
-A página será recarregada se você fizer edições. \
-Você também verá quaisquer erros de lint no console.
+## 🚀 Instalando <nome_do_projeto>
 
-### `yarn test`
+Para instalar o Wather App, siga estas etapas:
 
-Consulte a seção sobre \
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) para obter mais informações.
+Terminal:
+```
+git clone https://github.com/edson-dantass/wather-app.git
 
-### `yarn build`
+```
+Entre na pasta do projeto e instale as dependências:
 
-Compila o aplicativo para produção na pasta `build`. \
-Ele agrupa corretamente o React no modo de produção e otimiza a construção para o melhor desempenho.
+```
+npm install
 
-A compilação é reduzida e os nomes dos arquivos incluem os hashes. \
-Seu aplicativo está pronto para ser implantado!
+```
+## ☕ Usando Wather App
 
-Veja a seção sobre [deployment](https://facebook.github.io/create-react-app/docs/deployment) Para maiores informações.
+Para usar  Wather App, siga estas etapas:
+* Cole a KEY da api de Mapas no arquivo `.env` 
+* Cole a KEY da api de Tempo no arquivo `.env` 
+
+⚠️ Use o arquivo `.env.example` como exemplo.
+
+Execute o camando
+```
+npm start
+```
+
+Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Fornece uma referência de opções para pontos de bônus!
+
+## 🤝 Colaboradores
+
+Agradecemos às seguintes pessoas que contribuíram para este projeto:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/79416133?v=4" width="100px;" alt="Foto do Edson Dantas no GitHub"/><br>
+        <sub>
+          <b>Edson Dantas</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/6230359?v=4" width="100px;" alt="Adalto Junior no GitHub" /><br>
+        <sub>
+          <b>Adalto Junior</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+
+[⬆ Voltar ao topo](#nome-do-projeto)<br>
