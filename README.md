@@ -8,44 +8,48 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/edson-dantass/README-template?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/edson-dantass/README-template?style=for-the-badge)
 
-<img src="exemplo-image.png" alt="exemplo imagem">
+<img src=".github/preview.png" alt="Preview">
 
 > Uma aplicação web onde o usuário consegue visualizar as informações do clima de determinada localização. O usuário deverá ver sempre as informações do dia atual e dos próximos dias.
-
 
 ## 💻 Pré-requisitos
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-* Você instalou a versão mais recente do `NodeJS`
-* Yarn (Opcional)
-* Ter uma conta em https://console.cloud.google.com para obter uma KEY de acesso para ultilizar o mapa.
-* Ter uma conta em https://www.weatherapi.com/docs/ para obter uma KEY de acesso para ultilizar a API de clima.
+- Você instalou a versão mais recente do `NodeJS`
+- Yarn (Opcional)
+- Ter uma conta em https://console.cloud.google.com para obter uma KEY de acesso para ultilizar o mapa.
+- Ter uma conta em https://www.weatherapi.com/docs/ para obter uma KEY de acesso para ultilizar a API de clima.
 
 ## 🚀 Instalando <nome_do_projeto>
 
 Para instalar o Wather App, siga estas etapas:
 
 Terminal:
+
 ```
 git clone https://github.com/edson-dantass/wather-app.git
 
 ```
+
 Entre na pasta do projeto e instale as dependências:
 
 ```
 npm install
 
 ```
+
 ## ☕ Usando Wather App
 
-Para usar  Wather App, siga estas etapas:
-* Cole a KEY da api de Mapas no arquivo `.env` 
-* Cole a KEY da api de Tempo no arquivo `.env` 
+Para usar Wather App, siga estas etapas:
+
+- Cole a KEY da api de Mapas no arquivo `.env`
+- Cole a KEY da api de Tempo no arquivo `.env`
 
 ⚠️ Use o arquivo `.env.example` como exemplo.
 
 Execute o camando
+
 ```
 npm start
 ```
@@ -74,6 +78,5 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
   </tr>
 </table>
-
 
 [⬆ Voltar ao topo](#nome-do-projeto)<br>
