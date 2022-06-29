@@ -67,14 +67,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
         </sub>
       </a>
     </td>
-    <td align="center">
-      <a href="https://github.com/adaltojunior86">
-        <img src="https://avatars.githubusercontent.com/u/6230359?v=4" width="100px;" alt="Adalto Junior no GitHub" /><br>
-        <sub>
-          <b>Adalto Junior</b>
-        </sub>
-      </a>
-    </td>
   </tr>
 </table>
 
